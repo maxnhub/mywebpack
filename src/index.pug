@@ -7,10 +7,119 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(href="https://img.icons8.com/pastel-glyph/64/000000/hearts.png" rel="shortcut icon" type="image/x-icon")
-    title Portfolio | main page
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css")
+    title Lab | main page
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        //- +image('content/user.jpg', 'user-pic')
+        //- +icon('link', 'link-class')
+        //- .icon-bg
+        include common/header.pug
+        section.development
+          +image('content/mockup.png', 'development-pic')
+          .development__desc
+            h1.development__desc-title Разработка программного обеспечения
+            p.development__desc-text экстраординарные решения в области дизайна и разработки уникальных высокотехнологичных продуктов
+            p.development__desc-subtext в том числе – система автоматизации въезда и распознования номеров
+            a.page-link.development__link(href="#")
+              .page-link-logo
+                +icon('car', 'page-link-svg')
+              .page-link-text подробнее  
+        section.sport
+          .sport__desc 
+            h2.page-title2.sport__title Система автоматизации спортивных учреждений
+            p.sport__subtitle Систематизицация уровней данных
+            p.page-subtext.sport__subtext Создание виртуального администратора позволяет сократить лишние рабочие места, минимизировать коррупцию и, тем самым, увеличить доход Вашего бизнеса.
+            a.page-link.sport__link(href="#")
+              .page-link-logo
+                +icon('run', 'page-link-svg page-link-svg--run')
+              .page-link-text подробнее
+          +image('content/notebook.png', 'sport__pic')
+        section.system
+          .system__desc
+            h2.page-title2.system__title Электронная система управления очередью
+            .system__text
+              p.page-subtext.system__subtext Наличие систем электронной очереди — основной элемент качественного сервиса для компаний, чья деятельность связана с продажей или оказанием услуг. 
+              p.page-subtext.system__subtext Она автоматизирует и налаживает эффективную работу по обслуживанию клиентов и гарантирует отсутствие «человеческого фактора» по отношению к посетителям.
+            a.page-link.system__link(href="#")
+                .page-link-logo
+                  +icon('group', 'page-link-svg page-link-svg--group')
+                .page-link-text подробнее
+          +image('content/slide1.png', 'system__pic system__pic--1')
+          +image('content/slide2.png', 'system__pic system__pic--2')
+          +image('content/slide3.png', 'system__pic system__pic--3')
+        section.spa
+          h2.page-title2.spa__title Разработка сайта салона тутSPA
+          .spa__visual
+            .spa__slider.swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  +image('content/spa1.png', 'spa__pic')
+                li.swiper-slide
+                  +image('content/spaphones.png', 'spa__pic')
+                li.swiper-slide
+                  +image('content/spablocks.png', 'spa__pic')
+            a.spa__link(href="#")
+              +image('content/spa2.png', 'spa__pic')
+          .spa__desc
+            p.page-subtext.spa__subtext Приступая к работе над проектом для «тутSPA», мы изучили внутренние процессы компании, её ключевые предложения, а также конкурентную нишу. 
+            p.page-subtext.spa__subtext Благодаря исследованиям, сделали вывод, что основной задачей для бренда является акцент на привлекающей внимание демонстрации своих услуг.
+        section.mobile
+          +image('content/phones.png', 'mobile__pic')
+          .mobile__desc
+            h2.page-title2.mobile__title Мобильное приложение для оператора связи
+            .mobile__text
+              p.page-subtext.mobile__subtext Наличие систем электронной очереди — основной элемент качественного сервиса для компаний, чья деятельность связана с продажей или оказанием услуг. 
+              p.page-subtext.mobile__subtext Она автоматизирует и налаживает эффективную работу по обслуживанию клиентов и гарантирует отсутствие «человеческого фактора» по отношению к посетителям.
+            a.page-case.mobile__link(href="#") смотреть кейс
+        section.vebinars
+          .vebinars__dark
+            .vebinars__dark-desc
+              h2.page-title2.vebinars__dark-title Удобная платформа с понятным интерфейсом - наша работа с площадкой для вебинаров!
+              .vebinars__dark-about
+                p.page-subtext.vebinars__dark-subtext Мы постарались оценить и доработать все известные системы публикации вебинаров в совершенно новом виде. 
+                p.page-subtext.vebinars__dark-subtext Для Вашего удобства весь наш сервис основывается на модульной системе. Вы видите и используете только те инструменты, которые подходят именно Вам.
+            .vebinars__radio
+              .vebinars__radio-icons
+                +icon('sun', 'vebinars__radio-svg')
+                +icon('moon', 'vebinars__radio-svg')
+              .vebinars__radio-btn  
+            +image('content/smallslide1.png', 'vebinars__pic vebinars__pic--1')
+            +image('content/smallslide2.png', 'vebinars__pic vebinars__pic--2')
+          .vebinars__light
+            .vebinars__radio.vebinars__radio--light
+              .vebinars__radio-icons
+                +icon('sun', 'vebinars__radio-svg')
+                +icon('moon', 'vebinars__radio-svg')
+              .vebinars__radio-btn.vebinars__radio-btn--light 
+            a.page-case.vebinars__link(href="#") смотреть кейс
+            +image('content/smallslide3.png', 'vebinars__pic vebinars__pic--3')
+            +image('content/smallslide4.png', 'vebinars__pic vebinars__pic--4')
+            +image('content/smallslide5.png', 'vebinars__pic vebinars__pic--5')
+            +image('content/smallslidebig.png', 'vebinars__pic vebinars__pic--6')
+        section.dream
+          .container.dream__container
+            .dream__desc
+              h2.page-title2.dream__title Разработка сайта банкетного комплекса ”Мечта” в Петербурге
+              p.page-subtext.dream__subtext Мы не можем не потратить время и не позаботиться о красивых попапах, инпутах в формах обратной связи, да вообще, все начинается со стайлгайда, куда же без него. Многие его недооценивают, это индикатор порядка и структуры на сайте
+              a.page-case.dream__link.page-link--dream(href="#") смотреть кейс
+        section.oneclick
+          .oneclick__desc
+            h2.page-title2.oneclick__title Упростите главный шаг клиента - оплату. Банковская система OneClickPay
+            p.page-subtext.oneclick__subtext «Система денежных переводов» - это инновационный продукт, представляющий собой целый программно-аппаратный комплекс для облегчения получения средств и ведения надежного учета.
+            a.page-link.oneclick__link(href="#")
+              .page-link-logo
+                +icon('oneclick', 'page-link-svg page-link-svg--oneclick')
+              .page-link-text подробнее
+        include common/footer.pug
+    script(src="https://unpkg.com/swiper/js/swiper.js")
+    script(src="https://unpkg.com/swiper/js/swiper.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js")        
+
+
+                
+                
+
+

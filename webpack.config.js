@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
     const isProductionBuild = argv.mode === "production";
-    const publicPath = '/imya-proekta-na-github';
+    const publicPath = '/lab/';
 
     const pcss = {
         test: /\.(p|post|)css$/,

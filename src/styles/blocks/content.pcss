@@ -1,0 +1,43 @@
+.content__language {
+  position: relative;
+  &-select {
+    display: flex;
+    align-items: center;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: -10px;
+      width: 0;
+      height: 0;
+      border-top: 6px solid #F2F2F2;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+    }
+    &-text {
+      color: #F2F2F2;
+    }
+  }
+  &-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s,visibility .25s;
+    z-index: 1;
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+    &-item {
+      cursor: pointer;
+      color: $lab-color;
+      transition: color .35s;
+      &:hover {
+        color: #f2f2f2;
+      }
+    }
+  }
+}

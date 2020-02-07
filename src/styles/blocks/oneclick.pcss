@@ -1,0 +1,31 @@
+.oneclick {
+  background: url("../../src/images/content/oneclick.png") 0 0/cover no-repeat;
+  min-height: 924px;
+  padding-top: 187px;
+  padding-left: 176px;
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    width: 401px;
+  }
+  &__title, .oneclick__subtext, .oneclick__link  {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: 1s;
+    &--show {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  &__title.page-title2 {
+    color: #fff;
+    margin-bottom: 41px;
+  }
+  &__subtext.page-subtext {
+    color: #f2f2f2;
+    margin-bottom: 49px;
+  }
+  &__link.page-link {
+    align-self: center;
+  }
+}

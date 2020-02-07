@@ -1,0 +1,40 @@
+.dream {
+  background: url(../../src/images/content/dream.png) 0 0 /cover no-repeat;
+  min-height: 886px;
+  &__desc {
+    width: 407px;
+  }
+  &__title {
+    margin-bottom: 90px;
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: 1s;
+    &--show {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  &__subtext {
+    margin-bottom: 101px;
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: 1s;
+    &--show {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  &__link {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: 1s;
+    &--show {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  &__link.page-link--dream {
+    width: auto;
+    padding-left: 174px;
+  }
+}

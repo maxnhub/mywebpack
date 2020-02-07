@@ -1,5 +1,5 @@
 
-# Сборка webpack
+# Тестовый статичный landing для Webiray
 
 ##  Макс Никульников
 
@@ -15,8 +15,8 @@
 #### How to install and build my app
 
 ```sh
-1. git clone git@github.com:maxnhub/mywebpack.git
-2. cd mywebpack
+1. git clone git@github.com:maxnhub/lab.git
+2. cd lab
 3. npm i
 4. npm run build
 ```

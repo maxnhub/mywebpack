@@ -1,0 +1,218 @@
+.footer {
+  background: #14141C;
+  padding-top: 42px;
+  padding-bottom: 22px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__language {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 46px;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 116px;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    &-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: $lab-color;
+      position: relative;
+      margin-bottom: 5px;
+      &:after {
+        content: "LAB";
+        position: absolute;
+        top: 48px;
+        right: 35%;
+        font-size: 11px;
+        font-weight: 600;
+        color: $lab-color;
+      }
+    }
+    &-icon {
+      width: 49px;
+      height: 49px;
+      fill: $lab-color; 
+    }
+  }
+  &__language {
+    &-item {
+      &--drop {
+        position: absolute;
+        bottom: -15px;
+        display: none;
+      }
+      &--active {
+        position: relative;
+      }
+    }
+    &-field:hover .footer__language-item {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  &__links {
+    display: flex;
+    padding-left: 80px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 87px;
+    &--nav {
+      width: min-content;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &-item {
+      color: #F2F2F2;
+      margin-bottom: 10px;
+      &:hover {
+        color: $lab-color;
+      }
+    }
+  }
+  &__left-column {
+    flex: 1;
+  }
+  &__right-column {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    margin-right: 145px;
+    &-company {
+      color: #FFFFFF;
+      text-align: right;
+      margin-bottom: 36px;
+    }
+    &-list {
+      display: flex;
+    }
+    &-item {
+      margin-right: 25px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      &-icon {
+        width: 23px;
+        height: 23px;
+        fill: #fff;
+        &--viber {
+          fill: #D536FD;
+        }
+        &--whatsup {
+          fill: #47D25C;
+        }
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      margin-bottom: 26px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-icon {
+        width: 23px;
+        height: 23px;
+        fill: #fff;
+        &--youtube {
+          width: 25px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__authors {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      margin-bottom: 7px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &-text {
+        color: #f2f2f2;
+        margin-right: 3px;
+      }
+      &-link {
+        color: $lab-bg-color;
+        &:hover {
+          color: $lab-color;
+        }
+      }
+    }
+  }
+  &__scrollup {
+    padding-top: 9px;
+    &-icon {
+      width: 24px;
+      height: 32px;
+      fill: #f2f2f2;
+    }
+  }
+  &__language {
+    position: relative;
+    &-select {
+      display: flex;
+      align-items: center;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: -10px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid #F2F2F2;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+      }
+      &-text {
+        color: #F2F2F2;
+      }
+    }
+    &-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s,visibility .25s;
+      z-index: 1;
+      &--active {
+        opacity: 1;
+        visibility: visible;
+      }
+      &-item {
+        cursor: pointer;
+        color: $lab-color;
+        transition: color .35s;
+        &:hover {
+          color: #f2f2f2;
+        }
+      }
+    }
+  }
+}
