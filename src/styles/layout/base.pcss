@@ -12,13 +12,12 @@ html {
 }
 
 body {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $lab-color;
-
+  color: $text-color;
 }
 
 .wrapper {
@@ -29,8 +28,9 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1106px;
-  width: 100%;
+  max-width: 1480px;
+  width: 95%;
+  // width: 1490px;
 
   @include phones {
     width: 85%;
@@ -80,7 +80,6 @@ button[type="button"] {
 a {
   color: inherit;
   cursor: pointer;
-  text-decoration: none;
 }
 
 img {
