@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
     const isProductionBuild = argv.mode === "production";
-    const publicPath = '/imya-proekta-na-github';
+    const publicPath = '/imya-proekta-na-github/';
 
     const pcss = {
         test: /\.(p|post|)css$/,
@@ -81,6 +81,15 @@ module.exports = (env, argv) => {
         ]
     };
 
+    const fonts = {
+        test: /\.(otf|eot|ttf|woff|woff2)$/,
+        use: [
+            {
+                loader: 'file-loader?name=./src/fonts/[name].[ext]'
+            }
+        ]
+    };
+
     const config = {
         entry: {
             main: "./src/main.js",
@@ -93,7 +102,7 @@ module.exports = (env, argv) => {
             chunkFilename: "[chunkhash].js"
         },
         module: {
-            rules: [pcss, vue, js, files, svg, pug]
+            rules: [pcss, vue, js, files, svg, pug, fonts]
         },
         resolve: {
             alias: {
